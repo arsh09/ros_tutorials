@@ -6,7 +6,7 @@
     default="False" />
   <param
     name="robot_description"
-    textfile="$(find gp7_robot)/urdf/gp7_robot.urdf" />
+    textfile="$(find gp7_visualization)/urdf/gp7_robot.urdf" />
   <param
     name="use_gui"
     value="$(arg gui)" />
@@ -22,5 +22,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find gp7_robot)/urdf.rviz" />
+    args="-d $(find gp7_visualization)/urdf.rviz" />
 </launch>
