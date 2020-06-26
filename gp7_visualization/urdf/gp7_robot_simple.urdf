@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<robot name="gp7_robot">
+<robot
+  name="gp7_robot">
+
 
   <link name="world"/>
   <joint name="joint_w" type="fixed">
@@ -8,7 +10,8 @@
     <child link="base_link" />
   </joint>
   
-  <link name="base_link">
+  <link
+    name="base_link">
     <inertial>
       <origin
         xyz="-0.0661020995616514 0.000556312270044364 0.0576570103444227"
@@ -47,8 +50,8 @@
       </geometry>
     </collision>
   </link>
-
-  <link  name="link_1_s">
+  <link
+    name="link_s_1">
     <inertial>
       <origin
         xyz="-0.0233610982039615 -0.0409634881495871 -0.00705078625461891"
@@ -69,7 +72,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/visual/link_1_s.STL" />
+          filename="package://gp7_visualization/meshes/visual/link_s_1.STL" />
       </geometry>
       <material
         name="">
@@ -83,12 +86,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/collision/link_1_s.stl" />
+          filename="package://gp7_visualization/meshes/collision/link_s_1.stl" />
       </geometry>
     </collision>
   </link>
-
-  <joint  name="joint_1_s"
+  <joint
+    name="joint_s_1"
     type="revolute">
     <origin
       xyz="0.039986 -0.0010471 0.33"
@@ -96,7 +99,7 @@
     <parent
       link="base_link" />
     <child
-      link="link_1_s" />
+      link="link_s_1" />
     <axis
       xyz="0 0 -1" />
     <limit
@@ -105,8 +108,8 @@
       effort="30"
       velocity="6.545" />
   </joint>
-
-  <link name="link_2_l">
+  <link
+    name="link_l_2">
     <inertial>
       <origin
         xyz="-0.0153704712139654 0.0166692289806514 0.205508701542665"
@@ -127,7 +130,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/visual/link_2_l.STL" />
+          filename="package://gp7_visualization/meshes/visual/link_l_2.STL" />
       </geometry>
       <material
         name="">
@@ -141,20 +144,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/collision/link_2_l.stl" />
+          filename="package://gp7_visualization/meshes/collision/link_l_2.stl" />
       </geometry>
     </collision>
   </link>
-
-  <joint  name="joint_2_l"
+  <joint
+    name="joint_l_2"
     type="revolute">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="link_1_s" />
+      link="link_s_1" />
     <child
-      link="link_2_l" />
+      link="link_l_2" />
     <axis
       xyz="0 -1 0" />
     <limit
@@ -163,8 +166,8 @@
       effort="30"
       velocity="6.545" />
   </joint>
-
-  <link name="link_3_u">
+  <link
+    name="link_u_3">
     <inertial>
       <origin
         xyz="-0.000500936552424655 -0.00941969624887269 0.0218171190109101"
@@ -185,7 +188,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/visual/link_3_u.STL" />
+          filename="package://gp7_visualization/meshes/visual/link_u_3.STL" />
       </geometry>
       <material
         name="">
@@ -199,20 +202,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/collision/link_3_u.stl" />
+          filename="package://gp7_visualization/meshes/collision/link_u_3.stl" />
       </geometry>
     </collision>
   </link>
-
-  <joint  name="joint_3_u"
+  <joint
+    name="joint_u_3"
     type="revolute">
     <origin
       xyz="0 0 0.445"
       rpy="0 0 0" />
     <parent
-      link="link_2_l" />
+      link="link_l_2" />
     <child
-      link="link_3_u" />
+      link="link_u_3" />
     <axis
       xyz="0 -1 0" />
     <limit
@@ -221,8 +224,8 @@
       effort="30"
       velocity="6.545" />
   </joint>
-
-  <link name="link_4_r">
+  <link
+    name="link_r_4">
     <inertial>
       <origin
         xyz="-0.144528762363287 -0.000457848370011256 0.00100877854966697"
@@ -243,7 +246,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/visual/link_4_r.STL" />
+          filename="package://gp7_visualization/meshes/visual/link_r_4.STL" />
       </geometry>
       <material
         name="">
@@ -257,20 +260,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/collision/link_4_r.stl" />
+          filename="package://gp7_visualization/meshes/collision/link_r_4.stl" />
       </geometry>
     </collision>
   </link>
-
-  <joint  name="joint_4_r"
+  <joint
+    name="joint_r_4"
     type="revolute">
     <origin
       xyz="0.32065 0 0.04"
       rpy="0 0 0" />
     <parent
-      link="link_3_u" />
+      link="link_u_3" />
     <child
-      link="link_4_r" />
+      link="link_r_4" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -279,8 +282,8 @@
       effort="17"
       velocity="9.5993" />
   </joint>
-
-  <link name="link_5_b">
+  <link
+    name="link_b_5">
     <inertial>
       <origin
         xyz="0.0215355985784859 -0.000865097565469207 0.000294489292992695"
@@ -301,7 +304,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/visual/link_5_b.STL" />
+          filename="package://gp7_visualization/meshes/visual/link_b_5.STL" />
       </geometry>
       <material
         name="">
@@ -315,20 +318,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/collision/link_5_b.stl" />
+          filename="package://gp7_visualization/meshes/collision/link_b_5.stl" />
       </geometry>
     </collision>
   </link>
-
-  <joint name="joint_5_b"
+  <joint
+    name="joint_b_5"
     type="revolute">
     <origin
       xyz="0.11935 0 0"
       rpy="0 0 0" />
     <parent
-      link="link_4_r" />
+      link="link_r_4" />
     <child
-      link="link_5_b" />
+      link="link_b_5" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -337,8 +340,8 @@
       effort="17"
       velocity="9.5993" />
   </joint>
-
-  <link name="link_6_t">
+  <link
+    name="link_t_6">
     <inertial>
       <origin
         xyz="0.010342612733208 0.000104247977295127 -1.55781338939676E-08"
@@ -359,7 +362,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/visual/link_6_t.STL" />
+          filename="package://gp7_visualization/meshes/visual/link_t_6.STL" />
       </geometry>
       <material
         name="">
@@ -373,20 +376,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gp7_visualization/meshes/collision/link_6_t.stl" />
+          filename="package://gp7_visualization/meshes/collision/link_t_6.stl" />
       </geometry>
     </collision>
   </link>
-
-  <joint name="joint_6_t"
+  <joint
+    name="joint_t_6"
     type="revolute">
     <origin
       xyz="0.065 0 0"
       rpy="0 0 0" />
     <parent
-      link="link_5_b" />
+      link="link_b_5" />
     <child
-      link="link_6_t" />
+      link="link_t_6" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -396,80 +399,6 @@
       velocity="17.453" />
   </joint>
 
-  <gazebo>
-    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/gp7_robot</robotNamespace>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-      <legacyModeNS>true</legacyModeNS>
-    </plugin>
-  </gazebo>
-
-
-  <transmission name="T1">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_1_s">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="M1">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-
-  <transmission name="T2">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_2_l">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="M2">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  
-  <transmission name="T3">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_3_u">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="M3">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  
-  <transmission name="T4">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_4_r">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="M4">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-
-  <transmission name="T5">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_5_b">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="M5">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-
-  <transmission name="T6">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_6_t">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="M6">
-      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
 
   
 </robot>
