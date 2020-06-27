@@ -3,6 +3,7 @@
 <robot name="gp7_robot">
 
   <link name="world"/>
+  
   <joint name="joint_w" type="fixed">
     <parent link="world"/>
     <child link="base_link" />
