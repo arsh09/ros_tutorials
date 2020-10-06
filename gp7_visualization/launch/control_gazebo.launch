@@ -26,7 +26,7 @@
  pkg="controller_manager"
  ns="/gp7_robot"
  type="spawner"
- args="
+ args=" 
     joint_state_controller
     arm_controller
  ">

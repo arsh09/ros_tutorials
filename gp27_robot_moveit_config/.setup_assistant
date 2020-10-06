@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: gp7_visualization
+    relative_path: urdf/gp7_robot.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/gp7_robot.srdf
+  CONFIG:
+    author_name: arshad
+    author_email: muhammadarshad0910@gmail.com
+    generated_timestamp: 1601975461
