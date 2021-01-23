@@ -1,0 +1,7 @@
+controller_list:
+    
+  - name: gp7_robot/arm_controller
+    action_ns: "follow_joint_trajectory"
+    type: FollowJointTrajectory
+    default: true
+    joints: [joint_1_s, joint_2_l, joint_3_u, joint_4_r, joint_5_b, joint_6_t]
